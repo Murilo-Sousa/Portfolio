@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="/css/style_index.css">
+    <link rel="stylesheet" href="/css/calculator.css">
+    <link rel="shortcut icon" href="/icons/calculadora.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Relógio</a></li>
+            <li><a href="/tasks.html">Tarefas</a></li>
+            <li class="active"><a href="/calculator.html">Calculadora</a></li>
+            <li><a href="/currency.html">Moedas</a></li>
+        </ul>
+        <button id="theme-toggle">Modo Escuro</button>
+    </nav>
+
+    <main class="calculator-container">
+        <h1>Calculadora</h1>
+        
+        <div class="calculator">
+            <div class="display" id="display">0</div>
+            <div class="buttons">
+                <button class="btn operator" value="C">C</button>
+                <button class="btn operator" value="±">±</button>
+                <button class="btn operator" value="%">%</button>
+                <button class="btn operator" value="/">/</button>
+                
+                <button class="btn" value="7">7</button>
+                <button class="btn" value="8">8</button>
+                <button class="btn" value="9">9</button>
+                <button class="btn operator" value="*">×</button>
+                
+                <button class="btn" value="4">4</button>
+                <button class="btn" value="5">5</button>
+                <button class="btn" value="6">6</button>
+                <button class="btn operator" value="-">-</button>
+                
+                <button class="btn" value="1">1</button>
+                <button class="btn" value="2">2</button>
+                <button class="btn" value="3">3</button>
+                <button class="btn operator" value="+">+</button>
+                
+                <button class="btn zero" value="0">0</button>
+                <button class="btn" value=".">.</button>
+                <button class="btn operator" value="=">=</button>
+            </div>
+        </div>
+    </main>
+
+    <a href="Murilo.html#projetos" class="btn-voltar">Voltar</a>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/calculator.js"></script>
+</body>
+</html>
