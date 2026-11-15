@@ -1,0 +1,36 @@
+.contact__list {
+  max-width: var(--measure);
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.contact__row {
+  display: grid;
+  gap: 0.1rem;
+  padding-block: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.contact__value {
+  font-size: var(--text-lg);
+  overflow-wrap: anywhere;
+}
+
+.contact__value.is-pending {
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (min-width: 40rem) {
+  .contact__row {
+    grid-template-columns: 9rem 1fr;
+    align-items: baseline;
+    gap: 1rem;
+  }
+}

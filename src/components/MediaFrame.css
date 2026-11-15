@@ -1,0 +1,27 @@
+.media {
+  aspect-ratio: var(--ratio-mobile);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+@media (min-width: 48rem) {
+  .media {
+    aspect-ratio: var(--ratio);
+  }
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}

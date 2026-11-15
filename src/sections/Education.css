@@ -1,0 +1,46 @@
+.education__list {
+  max-width: var(--measure);
+  border-bottom: 1px solid var(--line);
+}
+
+.education__item {
+  padding-block: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.education__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.75rem;
+}
+
+.education__institution {
+  font-size: var(--text-lg);
+}
+
+.education__course {
+  margin-top: 0.15rem;
+  font-weight: 600;
+}
+
+.education__description,
+.education__period {
+  margin-top: 0.15rem;
+  color: var(--muted);
+}
+
+.education__certs {
+  max-width: var(--measure);
+  margin-top: clamp(2rem, 5vw, 3rem);
+}
+
+.education__certs-title {
+  font-size: var(--title-h3);
+}
+
+.education__certs-note {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}

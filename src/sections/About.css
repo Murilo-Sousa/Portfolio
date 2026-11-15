@@ -1,0 +1,29 @@
+.facts {
+  max-width: var(--measure);
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.facts__row {
+  display: grid;
+  gap: 0.1rem;
+  padding-block: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.facts dt {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--muted);
+}
+
+@media (min-width: 40rem) {
+  .facts__row {
+    grid-template-columns: 9rem 1fr;
+    gap: 1rem;
+  }
+
+  .facts dt {
+    padding-top: 0.15rem;
+  }
+}

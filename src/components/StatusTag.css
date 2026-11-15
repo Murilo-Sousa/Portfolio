@@ -1,0 +1,19 @@
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.status-tag__dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--accent);
+}

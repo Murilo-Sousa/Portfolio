@@ -1,0 +1,315 @@
+/* Página de cada projeto: título, ficha, links, capa e seções em uma coluna. */
+
+/* Sem rodapé: a página termina com um respiro depois do link do próximo projeto */
+.case {
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.case__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.25rem 1.5rem;
+}
+
+.case__back {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.case__back:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.case__index {
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.case__title {
+  font-size: var(--title-h1);
+  letter-spacing: -0.02em;
+}
+
+/* Ficha: categoria, contexto, situação e tecnologias */
+
+.case__meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  column-gap: 2rem;
+  margin-top: 1.5rem;
+  padding-block: 0.4rem;
+  border-block: 1px solid var(--line);
+}
+
+.case__meta-item {
+  display: grid;
+  gap: 0.15rem;
+  align-content: start;
+  padding-block: 0.7rem;
+}
+
+.case__meta-item dt {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.case__meta-note {
+  margin-top: 0.5rem;
+  max-width: 46rem;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.case__meta-item--tech {
+  grid-column: 1 / -1;
+}
+
+/* Demonstração e código ficam no alto da página */
+
+.case__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.case__pending {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-inline: 1.15rem;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+@media (max-width: 30rem) {
+  .case__actions .btn {
+    flex: 1 1 100%;
+  }
+}
+
+.case__cover {
+  margin-top: 2rem;
+}
+
+.case__cover-credit {
+  margin-top: 0.5rem;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+/* Índice da página */
+
+.case-index {
+  margin-top: 2rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.case-index__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.case-index__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.case-index__button {
+  padding-block: 0.3rem;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-align: left;
+}
+
+.case-index__button:hover {
+  color: var(--accent-hover);
+}
+
+/* Seções */
+
+.case-section {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  padding-top: clamp(1.5rem, 4vw, 2.25rem);
+  border-top: 1px solid var(--line);
+}
+
+.case-section__title {
+  font-size: var(--title-h2);
+  letter-spacing: -0.01em;
+}
+
+.case-section__title:focus {
+  outline: none;
+}
+
+.case-section__body {
+  max-width: var(--measure);
+  margin-top: 1rem;
+}
+
+.case-section--wide .case-section__body {
+  max-width: none;
+}
+
+.case-prose > * + * {
+  margin-top: 1rem;
+}
+
+/* Listas (participação e características) */
+
+.case-list {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.case-list li + li {
+  margin-top: 0.45rem;
+}
+
+.case-list li::marker {
+  color: var(--muted);
+}
+
+.case-list--dense li + li {
+  margin-top: 0.3rem;
+}
+
+.case-list__note {
+  margin-top: 1rem;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+/* Telas */
+
+.case-gallery {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.case-gallery__zoom {
+  display: block;
+  cursor: zoom-in;
+}
+
+.case-gallery__zoom:hover .media {
+  border-color: var(--muted);
+}
+
+.case-gallery__caption {
+  margin-top: 0.5rem;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.case-gallery__note {
+  margin-top: 1.5rem;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+/* Capturas de celular não esticam: largura de um celular, centralizadas */
+.case-gallery__item--phone {
+  width: min(100%, 17rem);
+  margin-inline: auto;
+}
+
+/* Captura pequena: aparece na largura original, sem ampliar */
+.case-gallery__item--narrow {
+  width: min(100%, 47rem);
+  margin-inline: auto;
+}
+
+@media (min-width: 48rem) {
+  .case-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-gallery__item--full,
+  .case-gallery__item--narrow {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Decisões de projeto / processo */
+
+.case-steps__item {
+  display: grid;
+  gap: 0.25rem;
+  padding-block: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+.case-steps__item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.case-steps__item dt {
+  font-weight: 700;
+}
+
+@media (min-width: 40rem) {
+  .case-steps__item {
+    grid-template-columns: 11rem 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Próximo projeto */
+
+.case-next {
+  margin-top: clamp(2.5rem, 6vw, 3.5rem);
+  border-top: 1px solid var(--line);
+}
+
+.case-next__link {
+  display: block;
+  padding-block: 1.5rem;
+}
+
+.case-next__label {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.case-next__name {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: var(--title-h2);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.case-next__link:hover .case-next__name {
+  color: var(--accent);
+}
+
+/* Projeto não encontrado */
+
+.case--missing {
+  padding-block: clamp(3rem, 8vw, 5rem);
+}
+
+.case__missing-title {
+  font-size: var(--title-h1);
+}
+
+.case__missing-text {
+  margin-block: 0.75rem 1.5rem;
+  color: var(--muted);
+}

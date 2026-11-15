@@ -1,0 +1,12 @@
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius);
+}
+
+.theme-toggle:hover {
+  background: var(--surface);
+}

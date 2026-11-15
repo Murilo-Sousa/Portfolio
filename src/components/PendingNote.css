@@ -1,0 +1,16 @@
+.pending {
+  padding: 1rem 1.25rem;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+}
+
+.pending__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.pending__text {
+  margin-top: 0.15rem;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}

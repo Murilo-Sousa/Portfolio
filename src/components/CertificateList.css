@@ -1,0 +1,91 @@
+.cert-groups {
+  border-bottom: 1px solid var(--line);
+}
+
+.cert-group {
+  border-top: 1px solid var(--line);
+}
+
+/* Linha de título do grupo: nome, quantidade e o sinal de abrir/fechar */
+.cert-group__summary {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 0.9rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+.cert-group__summary::-webkit-details-marker {
+  display: none;
+}
+
+.cert-group__summary::after {
+  content: '+';
+  content: '+' / '';
+  flex: none;
+  width: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.cert-group[open] > .cert-group__summary::after {
+  content: '\2212';
+  content: '\2212' / '';
+}
+
+.cert-group__title {
+  min-width: 0;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.cert-group__count {
+  margin-left: auto;
+  white-space: nowrap;
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.cert-group__summary:hover .cert-group__title {
+  color: var(--accent);
+}
+
+.cert-group__body {
+  padding-bottom: 1.25rem;
+}
+
+.cert-group__note {
+  margin-bottom: 0.75rem;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+/* Um certificado por linha: nome e, abaixo, os dados em uma linha miúda */
+
+.cert {
+  padding-block: 0.7rem;
+  border-top: 1px solid var(--line);
+}
+
+.cert__title {
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.cert__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 0;
+  margin-top: 0.15rem;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.cert__meta span + span::before {
+  content: '·';
+  margin-inline: 0.55em;
+}

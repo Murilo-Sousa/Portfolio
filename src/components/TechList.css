@@ -1,0 +1,13 @@
+.techlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.techlist li:not(:last-child)::after {
+  content: ',';
+  content: ',' / '';
+  margin-right: 0.35em;
+}

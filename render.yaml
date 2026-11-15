@@ -1,0 +1,11 @@
+# Configuração opcional para o Render (Blueprint). Também dá para criar o site pelo painel,
+# com os mesmos valores: Build Command = npm install && npm run build, Publish Directory = dist.
+services:
+  - type: web
+    runtime: static
+    name: portfolio-murilo
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: NODE_VERSION
+        value: 20

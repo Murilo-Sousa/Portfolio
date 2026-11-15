@@ -1,0 +1,150 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: var(--header-h);
+}
+
+.signature {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.site-header__tools {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Navegação no desktop */
+
+.primary-nav {
+  display: none;
+  margin-left: auto;
+}
+
+.primary-nav ul {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.primary-nav a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+.primary-nav a:hover {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.primary-nav a[aria-current='location'] {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.45em;
+}
+
+/* Botão do menu no celular */
+
+.menu-toggle {
+  min-height: 2.75rem;
+  padding-inline: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.menu-toggle:hover {
+  background: var(--surface);
+}
+
+/* Menu do celular: painel logo abaixo do cabeçalho */
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: calc(100vh - var(--header-h));
+  overflow-y: auto;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.mobile-menu[data-open='true'] {
+  display: block;
+}
+
+.mobile-menu__list {
+  width: min(100% - 2 * var(--gutter), var(--max-width));
+  margin-inline: auto;
+  padding-block: 0.25rem 0.75rem;
+}
+
+.mobile-menu__list a {
+  display: block;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+  font-size: var(--text-lg);
+}
+
+.mobile-menu__list li:first-child a {
+  border-top: 0;
+}
+
+.mobile-menu__list a[aria-current='location'] {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+@media (min-width: 60rem) {
+  .primary-nav {
+    display: block;
+  }
+
+  .menu-toggle,
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .site-header__bar {
+    gap: 2rem;
+  }
+}
+
+/* Telas muito estreitas (320 px): o nome continua em uma linha */
+@media (max-width: 23rem) {
+  .site-header__bar {
+    gap: 0.5rem;
+  }
+
+  .signature {
+    font-size: 0.9375rem;
+  }
+
+  .site-header__tools .theme-toggle {
+    width: 2.5rem;
+  }
+
+  .menu-toggle {
+    padding-inline: 0.7rem;
+  }
+}
