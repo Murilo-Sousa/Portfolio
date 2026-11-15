@@ -6,13 +6,13 @@ Estudante de Web Design na FIAP e técnico em Desenvolvimento de Sistemas pelo S
 
 ## Portfólio
 
-Reuni meus projetos, minha formação e meus certificados no meu portfólio: **Murilo Sousa(https://portfolio-x3tq.onrender.com)**
+Reuni meus projetos, minha formação e meus certificados no meu portfólio: **[Murilo Sousa](https://portfolio-x3tq.onrender.com)**
 
 ## Projetos
 
 | Projeto | O que é | Tecnologias | Links |
 | --- | --- | --- | --- |
-| **IARA Games** | Loja de jogos digitais de estúdios brasileiros, com catálogo por categorias e pagamento em modo de teste. Projeto em grupo na FIAP. | HTML, CSS, JavaScript, React, Node.js, Express, Stripe | [Site](https://iaragames.onrender.com) · [Código](https://github.com/Murilo-Sousa/IaraGames) |
+| **IARA Games** | Loja de jogos digitais de estúdios brasileiros, com catálogo por categorias e pagamento em modo de teste. Projeto em grupo na FIAP. | HTML, CSS, JavaScript, React, Node.js, Express, Stripe | [Site](https://iaragames.onrender.com/) · [Código](https://github.com/Murilo-Sousa/IaraGames) |
 | **SELENE** | Painel de monitoramento de uma colônia lunar fictícia, com estética de terminal CRT. Projeto Selene, FIAP. | HTML, CSS, JavaScript, Canvas | [Site](https://selene-op70.onrender.com) · [Código](https://github.com/Murilo-Sousa/SELENE) |
 | **DiscPlayer** | Diário e comunidade para quem joga: catálogo de jogos, diário, notas, reviews e perfis. | React, Vite, Python, Flask, SQLite, API do IGDB | [Site](https://muh.pythonanywhere.com) · [Código](https://github.com/Murilo-Sousa/DiscPlayer) |
 
