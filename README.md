@@ -6,7 +6,7 @@ Estudante de Web Design na FIAP e técnico em Desenvolvimento de Sistemas pelo S
 
 ## Portfólio
 
-Reuni meus projetos, minha formação e meus certificados no meu portfólio: **Murilo Sousa](https://portfolio-x3tq.onrender.com)**
+Reuni meus projetos, minha formação e meus certificados no meu portfólio: **Murilo Sousa(https://portfolio-x3tq.onrender.com)**
 
 ## Projetos
 
